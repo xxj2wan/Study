@@ -9,6 +9,7 @@
   #topMenu {
     height:30px;
     width:850px;
+    position: relative;
   }
   #topMenu ul{
     list-style-type: none;
@@ -23,10 +24,10 @@
     line-height: 30px;
     vertical-align: middle;
     text-align: center;
-    position: relative;
+    /*position:relative;*/ /* 해당 li 태그 내부의 top/left 포지션 초기화*/
   }
-  .menuLink .submenuLink{
-    text-decoration: none;
+  .menuLink, .submenuLink{
+    text-decoration:none;
     display: block;
     width: 150px;
     font-size: 12px;
@@ -40,28 +41,40 @@
     color: red;
     background-color: #4d4d4d;
   }
+  .longLink{
+    width: 190px;
+  }
   .submenuLink{
     color:#2d2d2d;
     background-color: white;
     border: solid 1px black;
-    margin-top: -1px;
-  }
-  .longLink{
-    width:190px;
+    margin-right: -1px;
   }
   .submenu{
     position: absolute;
     height: 0px;
     overflow: hidden;
     transition: height .2s;
+    width:574px;
+    left:0;
   }
-  .topMenuLi:hover .submenu{
-    height: 120px;
+  .submenu li{
+    display:inline-block; /*가로 드랍다운 메뉴의 넓이*/
+  }
+  .topMenuLi:hover .submenu{ /*상위 메뉴에 마우스 옵버 한경우 그 하위 메뉴 스타일*/
+    height:32px;
+  }
+  .submenuLink:hover{
+    color:red;
+    background-color:#dddddd;
+  }
+  /*.topMenuLi:hover .submenu{
+    height: 93px;
   }
   .submenuLink:hover{
     color: red;
     background-color: #dddddd;
-  }
+  }*/
   </style>
   <title>The Overflowing Church</title>
 </head>
@@ -69,24 +82,24 @@
   This site is under construction!
   <nav id="topMenu">
     <ul>
-      <li class="topMenuLi">
-      <a class="menuLink" href="">About us</a>
+          <li class="topMenuLi">
+      <a class="menuLink" href="#">About Us</a>
       <ul class="submenu">
-        <li><a class="submenuLink longLink">introduce</a></li>
-        <li><a class="submenuLink longLink">Location</a></li>
-        <li><a class="submenuLink longLink">AboutTeam</a></li>
+        <li><a href="#" class="submenuLink">introduce</a></li>
+        <li><a href="#" class="submenuLink">Location</a></li>
+        <li><a href="#" class="submenuLink">Team</a></li>
       </ul>
     </li>
-      <li>|</li>
+                <li>|</li>
       <li class="topMenuLi">
-        <a class="menuLink" href="">Community</a>
+        <a class="menuLink" href="#">Community</a>
       </li>
-      <li>|</li>
+                <li>|</li>
       <li class="topMenuLi">
         <a class="menuLink" href="#">test1</a>
       <ul class="submenu">
-        <li><a class="submenuLink longLink">blank1</a></li>
-        <li><a class="submenuLink longLink">blank2</a></li>
+        <li><a href="#" class="submenuLink">blank1</a></li>
+        <li><a href="#" class="submenuLink">blank2</a></li>
       </ul>
     </li>
     </ul>

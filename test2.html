@@ -1,6 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="ko">
 <head>
-  <link rel="stylesheet" type="text/css" href="test4.css">
+  <meta charset="utf-8"/>
+  <meat name="description" content="the Overflowing church website's main page"/>
+  <meta name="author" content="hjh9322@gmail.com"/>
+  <title>The Overflowing Church</title>
+  <style>
+  #topMenu{
+    height: 30px;
+    width: 850px;
+  }
+  #topMenu ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+  }
+  #topMenu ul li{
+    /*list-style:none;*/
+    color: white;
+    background-color: #2d2d2d;
+    float: left;
+    line-height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+  }
+  .menuLink, .submenuLink{
+    text-decoration:none;
+    display: block;
+    width: 150px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", Dotum;
+  }
+  .menuLink{
+    color:white;
+  }
+  .topMenuLi:hover .menuLink{
+    color: red;
+    background-color: #4d4d4d;
+  }
+  .submenuLink{
+    color:#2d2d2d;
+    background-color: white;
+    border: solid 1px black;
+    margin-top: -1px;
+  }
+  .longLink{
+    width: 190px;
+  }
+  .submenu{
+    position: absolute;
+    height: 0px;
+    overflow: hidden;
+    transition: height .2s;
+  }
+  .topMenuLi:hover .submenu {
+    height:62px;
+  }
+  .submenuLink:hover{
+    color:red;
+    background-color:#dddddd;
+  }
+
+  /*#topMenu .menuLink{
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 150px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", Dotum, Arial;
+  }
+  #topMenu .menuLink:hover{
+    color: yellow;
+    background-color: #4d4d4d;
+  }*/
+  </style>
 </head>
-<div class="container">
-  <div class="block">%nbsp;</div>
-</div>
+<body>
+  <nav id="topMenu">
+    <ul>
+      <li class="topMenuLi">
+        <a class="menuLink" href="#">About us</a>
+        <ul class="submenu">
+          <li><a class="submenuLink longLink">생명공학부</a></li>
+          <li><a class="submenuLink longLink">분자생명공학전공</a></li>
+        </ul>
+      </li>
+        <li>|</li>
+      <li class="topMenuLi">
+        <a class="menuLink" href="#">Blog</a>
+      </li>
+    </ul>
+  </nav>
+  This site is under construction
+</body>
+</html>
