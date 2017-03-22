@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="description" content="the Overflowing church website's main page"/>
+  <meta name="author" content="hjh9322@gmail.com"/>
+  <style>
+  #topMenu {
+    height:30px;
+    width:850px;
+  }
+  #topMenu ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  #topMenu ul li{
+    color: white;
+    background-color: #2d2d2d;
+    float: left;
+    line-height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+  }
+  .menuLink .submenuLink{
+    text-decoration: none;
+    display: block;
+    width: 150px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", Dotum;
+  }
+  .menuLink{
+    color: white;
+  }
+  .topMenuLi:hover .menuLink{
+    color: red;
+    background-color: #4d4d4d;
+  }
+  .submenuLink{
+    color:#2d2d2d;
+    background-color: white;
+    border: solid 1px black;
+    margin-top: -1px;
+  }
+  .longLink{
+    width:190px;
+  }
+  .submenu{
+    position: absolute;
+    height: 0px;
+    overflow: hidden;
+    transition: height .2s;
+  }
+  .topMenuLi:hover .submenu{
+    height: 120px;
+  }
+  .submenuLink:hover{
+    color: red;
+    background-color: #dddddd;
+  }
+  </style>
+  <title>The Overflowing Church</title>
+</head>
+<body>
+  This site is under construction!
+  <nav id="topMenu">
+    <ul>
+      <li class="topMenuLi">
+      <a class="menuLink" href="">About us</a>
+      <ul class="submenu">
+        <li><a class="submenuLink longLink">introduce</a></li>
+        <li><a class="submenuLink longLink">Location</a></li>
+        <li><a class="submenuLink longLink">AboutTeam</a></li>
+      </ul>
+    </li>
+      <li>|</li>
+      <li class="topMenuLi">
+        <a class="menuLink" href="">Community</a>
+      </li>
+      <li>|</li>
+      <li class="topMenuLi">
+        <a class="menuLink" href="#">test1</a>
+      <ul class="submenu">
+        <li><a class="submenuLink longLink">blank1</a></li>
+        <li><a class="submenuLink longLink">blank2</a></li>
+      </ul>
+    </li>
+    </ul>
+  </nav>
+</body>
+</html>
